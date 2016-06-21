@@ -1,7 +1,6 @@
 
-# pull-downmenu
-================
-pull-down menu library.
+# PullDownMenu
+A android pull-down menu library.
 
 # Demo
 <p>

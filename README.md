@@ -82,6 +82,9 @@ pullDownMenuView.setOnItemSelectListener(new PullDownMenuView.OnItemSelectListen
     }
 });
 ```
+
+### Other
+
 * open menu method for PullDownMenuView
 
 ```java

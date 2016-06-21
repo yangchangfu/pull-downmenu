@@ -11,7 +11,9 @@
         android:id="@+id/pulldownmenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:menuTotalColumn="3"/>
+        app:menuTotalColumn="3"
+        app:menuTextSelectedColor="@color/theme_green_color"
+        app:menuTextUnselectedColor="@color/theme_black_color"/>
 
     <ImageView
         android:layout_width="match_parent"

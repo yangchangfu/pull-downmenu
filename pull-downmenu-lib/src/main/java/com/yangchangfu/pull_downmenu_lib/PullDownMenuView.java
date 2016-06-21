@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
@@ -31,13 +32,24 @@ public class PullDownMenuView extends LinearLayout {
     private LayoutInflater mLayoutInflater;
 
     private LinearLayout[] menuTabs;
+    private ImageView[] menuIcons;    // 记录下拉菜单的Item状态图标
     private TextView[] menuTabLabels;
     private Object[] menuDatas;
     private int[] menuColumnTypes;
     private int[][] menuSelectedIndexs;
 
-    private int menuColumn = 1;
     private int selectTag = -1;
+
+    private int menuColumn = 1;
+    // tab选中图标
+    private int menuSelectedIcon = R.drawable.arrow_up;
+    // tab未选中图标
+    private int menuUnselectedIcon = R.drawable.arrow_down;
+
+    // tab选中颜色
+    private int menuTextSelectedColor = 0xff14d0bc;
+    // tab未选中颜色
+    private int menuTextUnselectedColor = 0xff707070;
 
     private LinearLayout popup_layout;
     private PopupWindow mPopWin;
@@ -70,7 +82,11 @@ public class PullDownMenuView extends LinearLayout {
 
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.PullDownMenuView);
         menuColumn = a.getInteger(R.styleable.PullDownMenuView_menuTotalColumn, menuColumn);//下拉菜单的列数
+        menuSelectedIcon = a.getResourceId(R.styleable.PullDownMenuView_menuSelectedIcon, menuSelectedIcon);
+        menuUnselectedIcon = a.getResourceId(R.styleable.PullDownMenuView_menuUnselectedIcon, menuUnselectedIcon);
 
+        menuTextSelectedColor = a.getColor(R.styleable.PullDownMenuView_menuTextSelectedColor, menuTextSelectedColor);
+        menuTextUnselectedColor = a.getColor(R.styleable.PullDownMenuView_menuTextUnselectedColor, menuTextUnselectedColor);
 
         init();
     }
@@ -97,8 +113,9 @@ public class PullDownMenuView extends LinearLayout {
 
         //初始化数据
         menuTabs = new LinearLayout[menuColumn];
-        menuTabLabels = new TextView[menuColumn];
+        menuIcons = new ImageView[menuColumn];
         menuDatas = new Object[menuColumn];
+        menuTabLabels = new TextView[menuColumn];
         menuColumnTypes = new int[menuColumn];
         menuSelectedIndexs = new int[menuColumn][2];
 
@@ -108,6 +125,9 @@ public class PullDownMenuView extends LinearLayout {
             menuTabs[i] = (LinearLayout) mLayoutInflater.inflate(R.layout.menu_tab_item, null);
             menuTabLabels[i] = (TextView) menuTabs[i].findViewById(R.id.tv_item_name);
             menuTabLabels[i].setText("默认菜单" + i);
+            menuTabLabels[i].setTextColor(menuTextUnselectedColor);//设置字体默认颜色
+            menuIcons[i] = (ImageView) menuTabs[i].findViewById(R.id.iv_item_icon);
+            menuIcons[i].setImageResource(menuUnselectedIcon);//设置图标默认状态
             menuTabs[i].setTag(i);
             menuTabs[i].setLayoutParams(new LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1.0f));
             menuTabs[i].setOnClickListener(new OnClickListener() {
@@ -134,9 +154,36 @@ public class PullDownMenuView extends LinearLayout {
 
             this.addView(menuTabs[i]);
         }
-
     }
 
+    private void setDefaultTextColor(){
+        for (int i=0; i<menuTabLabels.length; i++){
+            menuTabLabels[i].setTextColor(menuTextUnselectedColor);
+        }
+    }
+
+    private void setSelectedTextColor(int column){
+        setDefaultTextColor();
+        menuTabLabels[column].setTextColor(menuTextSelectedColor);
+    }
+
+    /**
+     * 默认所有TabMenuItem右下角的图标
+     */
+    private void hideItemIcons(){
+
+        for (int i=0; i<menuIcons.length; i++){
+            menuIcons[i].setImageResource(menuUnselectedIcon);
+        }
+    }
+
+    /**
+     * 指定TabMenuItem右下角的图标为选中
+     */
+    private void showItemIcon(int index){
+        hideItemIcons();
+        menuIcons[index].setImageResource(menuSelectedIcon);
+    }
 
     /**
      * 隐藏DropDownMenuView视图
@@ -148,6 +195,9 @@ public class PullDownMenuView extends LinearLayout {
             mPopWin = null;
 
             selectTag = -1;
+
+            hideItemIcons();
+            setDefaultTextColor();
         }
     }
 
@@ -158,6 +208,9 @@ public class PullDownMenuView extends LinearLayout {
 
         final int index = (int) view.getTag();
         int type = menuColumnTypes[(int) view.getTag()];
+
+        showItemIcon(index);//显示item图标选中
+        setSelectedTextColor(index);
 
         if (type == 1) {
 

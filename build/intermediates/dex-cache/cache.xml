@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/apple/Documents/CF/pull-downmenu/app/build/intermediates/exploded-aar/pull-downmenu/pull-downmenu-lib/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="0a85299b5728bd2af600028d6f336288fd61a09e">
+        <dex dex="/Users/apple/Documents/CF/pull-downmenu/app/build/intermediates/pre-dexed/debug/pull-downmenu-pull-downmenu-lib-unspecified_4f6d70d5a7ca3e3c7ac0ebae2ea4a56ae7555ca9.jar" />
+    </item>
+
+</items>

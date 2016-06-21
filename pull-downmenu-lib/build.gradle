@@ -5,7 +5,7 @@ apply plugin: 'com.novoda.bintray-release'//2.应用bintray插件
 publish {
     userOrg = 'yangchangfu'
     groupId = 'com.yangchangfu'
-    artifactId = 'yangge-lib'
+    artifactId = 'pull-downmenu-lib'
     publishVersion = '1.0.0'
     desc = "this is a pull-down menu library."
     website = "https://github.com/yangchangfu/pull-downmenu"

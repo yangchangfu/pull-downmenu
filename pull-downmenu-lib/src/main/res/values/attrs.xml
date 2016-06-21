@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PullDownMenuView">
+
+        <attr name="menuTotalColumn"         format="integer"/>
+
+        <attr name="menuTextSelectedColor"     format="color"/>
+        <attr name="menuTextUnselectedColor"   format="color"/>
+
+        <attr name="menuSelectedIcon"      format="reference"/>
+        <attr name="menuUnselectedIcon"    format="reference"/>
+
+    </declare-styleable>
+
+</resources>

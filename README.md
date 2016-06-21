@@ -52,9 +52,7 @@ for (int i=0; i<15; i++){
 
     if (i % 2 == 0) {
         data.itemList = itemList;
-    } else {
-        //data.itemList = new ArrayList<>();
-    }
+    } 
 
     list0.add(data);
 }

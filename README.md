@@ -4,7 +4,7 @@ An android pull-down menu library.
 
 # Demo
 <p>
-   <img src="https://raw.githubusercontent.com/baoyongzhang/SwipeMenuListView/master/demo.gif" width="320" alt="Screenshot"/>
+   <img src="images/PulldownMenuView.gif" width="320" alt="Screenshot"/>
 </p>
 
 # Usage

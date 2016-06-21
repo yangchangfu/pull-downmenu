@@ -13,7 +13,7 @@ An android pull-down menu library.
 
 ```groovy
 dependencies {
-    compile 'com.baoyz.swipemenulistview:library:1.3.0'
+    compile 'com.yangchangfu:pull-downmenu-lib:1.0.0'
 }
 ```
 

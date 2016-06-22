@@ -18,7 +18,7 @@ An android pull-down menu library.
 
 ```groovy
 dependencies {
-    compile 'com.yangchangfu:pull-downmenu-lib:1.0.0'
+    compile 'com.yangchangfu:pull-downmenu-lib:1.0.1'
 }
 ```
 
@@ -74,16 +74,16 @@ pullDownMenuView.setMenuColumn(2, list0, 0);
 
 ```java
 pullDownMenuView.setOnItemSelectListener(new PullDownMenuView.OnItemSelectListener() {
-    @Override
-    public void OnItemSelect(int column, int position, PullDownMenuItemData data1, int position2, PullDownMenuItemData data2) {
-        System.out.println("----------------------------");
-        System.out.println("column = " + column);
-        System.out.println("position = " + position);
-        System.out.println("data1 = " + data1.toString());
-        System.out.println("position2 = " + position2);
-        System.out.println("data2 = " + data2.toString());
-    }
-});
+      @Override
+      public void OnItemSelect(int column, int position1, PullDownMenuItemData data1, int position2, PullDownMenuItemData data2) {
+          System.out.println("----------------------------");
+          System.out.println("column = " + column);
+          System.out.println("position1 = " + position1);
+          System.out.println("data1 = " + data1.toString());
+          System.out.println("position2 = " + position2);
+          System.out.println("data2 = " + data2.toString());
+      }
+  });
 ```
 
 ### Other
@@ -91,7 +91,8 @@ pullDownMenuView.setOnItemSelectListener(new PullDownMenuView.OnItemSelectListen
 * open menu method for PullDownMenuView
 
 ```java
-pullDownMenuView.setMenuColumn(0, list0, 0);
+//update menu
+pullDownMenuView.updateMenuColumn(2, list0, 5);
 ```
 * If you have questions, please contact me
 ```java

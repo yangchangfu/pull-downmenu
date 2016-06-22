@@ -4,8 +4,12 @@ An android pull-down menu library.
 
 # Demo
 <p>
-   <img src="images/PulldownMenuView.gif" width="320" alt="Screenshot"/>
+   <img src="images/demo.gif" width="320" alt="Screenshot"/>
 </p>
+
+![](images/1.png)
+
+![](images/2.png)
 
 # Usage
 
@@ -88,4 +92,3 @@ pullDownMenuView.setOnItemSelectListener(new PullDownMenuView.OnItemSelectListen
 ```java
 pullDownMenuView.setMenuColumn(0, list0, 0);
 ```
-

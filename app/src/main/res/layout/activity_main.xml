@@ -15,10 +15,14 @@
         app:menuTextSelectedColor="@color/theme_green_color"
         app:menuTextUnselectedColor="@color/theme_black_color"/>
 
-    <ImageView
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:text="点击更新数据"
+        android:gravity="center"
+        android:textColor="@color/white"
         android:background="@color/theme_green_color"/>
 
 </LinearLayout>

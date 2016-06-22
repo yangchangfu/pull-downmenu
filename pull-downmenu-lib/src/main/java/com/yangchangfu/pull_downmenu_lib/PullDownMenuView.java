@@ -251,7 +251,12 @@ public class PullDownMenuView extends LinearLayout {
             childList = (ListView) popup_layout.findViewById(R.id.childcategory);
 
             final List<PullDownMenuItemData> itemList1 = (List<PullDownMenuItemData>) menuDatas[index];
-            final List<PullDownMenuItemData> itemList2 = itemList1.get(menuSelectedIndexs[index][0]).itemList;
+            final List<PullDownMenuItemData> itemList2;
+            if (itemList1.size() > 0) {
+                itemList2 = itemList1.get(menuSelectedIndexs[index][0]).itemList;
+            } else {
+                itemList2 = new ArrayList<PullDownMenuItemData>();
+            }
 
             final PullDownMenuListAdapter rootAdapter = new PullDownMenuListAdapter(mContext, itemList1, true, true);
             rootList.setAdapter(rootAdapter);
@@ -266,7 +271,12 @@ public class PullDownMenuView extends LinearLayout {
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                     List<PullDownMenuItemData> itemList = (List<PullDownMenuItemData>) menuDatas[index];
-                    List<PullDownMenuItemData> data = itemList.get(position).itemList;
+                    List<PullDownMenuItemData> data;
+                    if (itemList.size() > 0) {
+                        data = itemList.get(position).itemList;
+                    } else {
+                        data = new ArrayList<PullDownMenuItemData>();
+                    }
                     childAdapter.update(data);
                     setMenuSelectedRow(index, 0, position);//设置菜单的选中行
                     setMenuSelectedRow(index, 1, 0);//设置菜单的选中行
@@ -287,8 +297,6 @@ public class PullDownMenuView extends LinearLayout {
                                 dismissPopupWindow();//关闭窗口
                             }
                         }, 300);
-
-
                     }
                 }
             });
@@ -378,7 +386,7 @@ public class PullDownMenuView extends LinearLayout {
      * 监听器的接口
      */
     public interface OnItemSelectListener {
-        void OnItemSelect(int column, int position, PullDownMenuItemData data1, int position2, PullDownMenuItemData data2);
+        void OnItemSelect(int column, int position1, PullDownMenuItemData data1, int position2, PullDownMenuItemData data2);
     }
 
     /**
@@ -412,6 +420,23 @@ public class PullDownMenuView extends LinearLayout {
             menuColumnTypes[columnIndex] = 1;
         }
 
+        List<PullDownMenuItemData> itemList = (List<PullDownMenuItemData>) menuDatas[columnIndex];
+        if (itemList.size() > 0) {
+            if (selectRowIndex1 > itemList.size() - 1) {
+                selectRowIndex1 = itemList.size() - 1;
+            }
+
+            List<PullDownMenuItemData> itemList2 = itemList.get(selectRowIndex1).itemList;
+            if (selectRowIndex2 != -1) {
+                if (selectRowIndex2 > itemList2.size() - 1) {
+                    selectRowIndex2 = itemList2.size() - 1;
+                }
+            }
+        } else {
+            selectRowIndex1 = -1;
+            selectRowIndex2 = -1;
+        }
+
         menuSelectedIndexs[columnIndex][0] = selectRowIndex1;
         menuSelectedIndexs[columnIndex][1] = selectRowIndex2;
 
@@ -427,6 +452,22 @@ public class PullDownMenuView extends LinearLayout {
     }
 
     public void setMenuColumn(int columnIndex, List<PullDownMenuItemData> list, int selectRowIndex) {
+        setMenuColumn(columnIndex, list, Style.SINGLE, selectRowIndex, -1);
+    }
+
+    /**
+     * 更新列的数据
+     *
+     * @param columnIndex
+     * @param list
+     * @param selectRowIndex1
+     * @param selectRowIndex2
+     */
+    public void updateMenuColumn(int columnIndex, List<PullDownMenuItemData> list, int selectRowIndex1, int selectRowIndex2) {
+        setMenuColumn(columnIndex, list, Style.DOUBLE, selectRowIndex1, selectRowIndex2);
+    }
+
+    public void updateMenuColumn(int columnIndex, List<PullDownMenuItemData> list, int selectRowIndex) {
         setMenuColumn(columnIndex, list, Style.SINGLE, selectRowIndex, -1);
     }
 
@@ -455,10 +496,31 @@ public class PullDownMenuView extends LinearLayout {
 
         PullDownMenuItemData data;
 
-        if (subcolumnIndex == 0) {
-            data = itemList.get(selectRowIndex);
-        } else {
-            data = itemList.get(menuSelectedIndexs[columnIndex][0]).itemList.get(selectRowIndex);
+        if (subcolumnIndex == 0)
+        {
+            if (itemList.size() > 0) {
+                if (selectRowIndex > itemList.size() - 1) {
+                    selectRowIndex = itemList.size() - 1;
+                }
+                data = itemList.get(selectRowIndex);
+            } else {
+                data = new PullDownMenuItemData();
+            }
+        }
+        else
+        {
+            if (itemList.size() > 0) {
+                if (itemList.get(menuSelectedIndexs[columnIndex][0]).itemList.size() > 0) {
+                    if (selectRowIndex > itemList.get(menuSelectedIndexs[columnIndex][0]).itemList.size() - 1) {
+                        selectRowIndex = itemList.get(menuSelectedIndexs[columnIndex][0]).itemList.size() - 1;
+                    }
+                    data = itemList.get(menuSelectedIndexs[columnIndex][0]).itemList.get(selectRowIndex);
+                } else {
+                    data = itemList.get(menuSelectedIndexs[columnIndex][0]);
+                }
+            } else {
+                data = new PullDownMenuItemData();
+            }
         }
 
         textView.setText(data.name);

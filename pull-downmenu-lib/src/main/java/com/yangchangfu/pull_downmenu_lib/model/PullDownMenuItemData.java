@@ -8,10 +8,10 @@ import java.util.List;
  */
 public class PullDownMenuItemData {
 
-    public String id;
-    public String name;
-    public String num;
-    public String icon; //示意图标
+    public String id = "";
+    public String name = "";
+    public String num = "";
+    public String icon = ""; //示意图标
 
     public List<PullDownMenuItemData> itemList = new ArrayList<>();
 

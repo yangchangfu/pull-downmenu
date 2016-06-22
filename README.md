@@ -9,9 +9,6 @@ An android pull-down menu library.
 
 <p>
    <img src="images/1.png" width="320" alt="Screenshot"/>
-</p>
-
-<p>
    <img src="images/2.png" width="320" alt="Screenshot"/>
 </p>
 

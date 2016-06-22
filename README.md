@@ -4,7 +4,6 @@ An android pull-down menu library.
 
 # Demo
 <p>
-   <img src="images/demo1.gif" width="320" alt="Screenshot"/>
    <img src="images/demo2.gif" width="320" alt="Screenshot"/>
 </p>
 

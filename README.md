@@ -7,9 +7,13 @@ An android pull-down menu library.
    <img src="images/demo.gif" width="320" alt="Screenshot"/>
 </p>
 
-![](images/1.png)
+<p>
+   <img src="images/1.png" width="320" alt="Screenshot"/>
+</p>
 
-![](images/2.png)
+<p>
+   <img src="images/2.png" width="320" alt="Screenshot"/>
+</p>
 
 # Usage
 

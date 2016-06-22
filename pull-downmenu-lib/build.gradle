@@ -6,7 +6,7 @@ publish {
     userOrg = 'yangchangfu'
     groupId = 'com.yangchangfu'
     artifactId = 'pull-downmenu-lib'
-    publishVersion = '1.0.0'
+    publishVersion = '1.0.1'
     desc = "this is a pull-down menu library."
     website = "https://github.com/yangchangfu/pull-downmenu"
 }

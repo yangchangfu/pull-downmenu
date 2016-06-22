@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //更新数据
-                pullDownMenuView.setMenuColumn(2, list0, 5);
+                pullDownMenuView.updateMenuColumn(2, list0, 5);
             }
         });
     }

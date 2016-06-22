@@ -8,8 +8,8 @@ An android pull-down menu library.
 </p>
 
 <p>
-   <img src="images/1.png" width="320" alt="Screenshot"/>
-   <img src="images/2.png" width="320" alt="Screenshot"/>
+   <img src="images/1.png" width="240" alt="Screenshot"/>
+   <img src="images/2.png" width="240" alt="Screenshot"/>
 </p>
 
 # Usage

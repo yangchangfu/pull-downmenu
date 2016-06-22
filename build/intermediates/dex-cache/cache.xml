@@ -2,53 +2,53 @@
 <items version="2" >
 
     <item
-        jar="/Users/apple/Development/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="/Users/apple/Documents/CF/pull-downmenu/app/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_dfa9f49f04822c6e967b79fa1d9a39382ad1a251.jar" />
-    </item>
-    <item
-        jar="/Users/apple/Documents/CF/pull-downmenu/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="/Users/apple/Documents/CF/pull-downmenu/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.4.0_14df9f8f159445ef54a4758c9c59ef6943f76948.jar" />
-    </item>
-    <item
-        jar="/Users/apple/Documents/CF/pull-downmenu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="/Users/apple/Documents/CF/pull-downmenu/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.4.0_00c7b5c1f91dbd473beb3610a7f809283b5ddad7.jar" />
-    </item>
-    <item
-        jar="/Users/apple/Documents/CF/pull-downmenu/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="/Users/apple/Documents/CF/pull-downmenu/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_5f2db46217fd644cc742f0c3415afe933696f357.jar" />
-    </item>
-    <item
-        jar="/Users/apple/Documents/CF/pull-downmenu/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
-        <dex dex="/Users/apple/Documents/CF/pull-downmenu/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.4.0_889e53ddb200f5e87df1900b7ab7f90ecaef9b96.jar" />
-    </item>
-    <item
-        jar="/Users/apple/Documents/CF/pull-downmenu/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jar="/Users/yangchangfu/Documents/Github/pull-downmenu/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.3"
         sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="/Users/apple/Documents/CF/pull-downmenu/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.4.0_4cff3438d2a3dfdd16b932e0016bd88a8a810a8a.jar" />
+        <dex dex="/Users/yangchangfu/Documents/Github/pull-downmenu/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.4.0_2e8ef8a7f03c27ced391c373b531ff719c257116.jar" />
     </item>
     <item
-        jar="/Users/apple/Documents/CF/pull-downmenu/app/build/intermediates/exploded-aar/pull-downmenu/pull-downmenu-lib/unspecified/jars/classes.jar"
+        jar="/Users/yangchangfu/Documents/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
         jumboMode="false"
         revision="23.0.3"
-        sha1="5b492977d5b699d19ca59ca108d6567b31c51f62">
-        <dex dex="/Users/apple/Documents/CF/pull-downmenu/app/build/intermediates/pre-dexed/debug/pull-downmenu-pull-downmenu-lib-unspecified_4f6d70d5a7ca3e3c7ac0ebae2ea4a56ae7555ca9.jar" />
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/yangchangfu/Documents/Github/pull-downmenu/app/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_91cc17a28dbaf0c01e3bc4c63b93317e1aa1b241.jar" />
+    </item>
+    <item
+        jar="/Users/yangchangfu/Documents/Github/pull-downmenu/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/yangchangfu/Documents/Github/pull-downmenu/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.4.0_0ea3c849b307c1fdae50d3b1f1f99c6102f05c8d.jar" />
+    </item>
+    <item
+        jar="/Users/yangchangfu/Documents/Github/pull-downmenu/app/build/intermediates/exploded-aar/pull-downmenu/pull-downmenu-lib/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="0d07d44f196bb1398dc8a71829ee594294388b6e">
+        <dex dex="/Users/yangchangfu/Documents/Github/pull-downmenu/app/build/intermediates/pre-dexed/debug/pull-downmenu-pull-downmenu-lib-unspecified_6c599a0669eedee641588ec4ec31d3fc5bda80d0.jar" />
+    </item>
+    <item
+        jar="/Users/yangchangfu/Documents/Github/pull-downmenu/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/Users/yangchangfu/Documents/Github/pull-downmenu/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.4.0_5d63a6ea8710491793ec19f683dee24be263f319.jar" />
+    </item>
+    <item
+        jar="/Users/yangchangfu/Documents/Github/pull-downmenu/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/yangchangfu/Documents/Github/pull-downmenu/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_08ffa4bda26fa4166c4d6c65963eaf88063dbeba.jar" />
+    </item>
+    <item
+        jar="/Users/yangchangfu/Documents/Github/pull-downmenu/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/yangchangfu/Documents/Github/pull-downmenu/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.4.0_ed008195d46ccc3f80d9c7be9fe8b81045dd3c3c.jar" />
     </item>
 
 </items>

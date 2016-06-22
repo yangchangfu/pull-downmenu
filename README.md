@@ -4,12 +4,12 @@ An android pull-down menu library.
 
 # Demo
 <p>
-   <img src="images/demo2.gif" width="270" height="400" alt="Screenshot"/>
+   <img src="images/demo2.gif" width="320" alt="Screenshot"/>
 </p>
 
 <p>
-   <img src="images/1.png" width="270" height="400" alt="Screenshot"/>
-   <img src="images/2.png" width="270" height="400" alt="Screenshot"/>
+   <img src="images/1.png" width="320" alt="Screenshot"/>
+   <img src="images/2.png" width="320" alt="Screenshot"/>
 </p>
 
 # Usage
